@@ -131,7 +131,7 @@
 		19F152D62387BE2E0043A86E /* JXCategoryView.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F1525F2387BE2E0043A86E /* JXCategoryView.png */; };
 		19F152D72387BE2E0043A86E /* arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F152602387BE2E0043A86E /* arrow_down.png */; };
 		19F152D82387BE2E0043A86E /* apple_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F152612387BE2E0043A86E /* apple_selected.png */; };
-		B038708881B01AEB14CA909B /* libPods-Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D40F29D0E15B01F380B08AE9 /* libPods-Example.a */; };
+		A0AFBF59D22A70F411B44277 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E2C054313C490E3D6DB1B0 /* Pods_Example.framework */; };
 		EAAD37BC2722472700271A5E /* ScrollSmallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAD37BB2722472700271A5E /* ScrollSmallViewController.m */; };
 		EAAD37BF27224AAB00271A5E /* JXCategoryScrollSmallCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAD37BE27224AAB00271A5E /* JXCategoryScrollSmallCellModel.m */; };
 		EAAD37C227224ABE00271A5E /* JXCategoryScrollSmallView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAD37C127224ABE00271A5E /* JXCategoryScrollSmallView.m */; };
@@ -362,8 +362,8 @@
 		19F152602387BE2E0043A86E /* arrow_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_down.png; sourceTree = "<group>"; };
 		19F152612387BE2E0043A86E /* apple_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple_selected.png; sourceTree = "<group>"; };
 		19F152D92387C3380043A86E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		84E2C054313C490E3D6DB1B0 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C386393D13D5F799E1A1236B /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
-		D40F29D0E15B01F380B08AE9 /* libPods-Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAAD37BA2722472700271A5E /* ScrollSmallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollSmallViewController.h; sourceTree = "<group>"; };
 		EAAD37BB2722472700271A5E /* ScrollSmallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollSmallViewController.m; sourceTree = "<group>"; };
 		EAAD37BD27224AAB00271A5E /* JXCategoryScrollSmallCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXCategoryScrollSmallCellModel.h; sourceTree = "<group>"; };
@@ -379,7 +379,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B038708881B01AEB14CA909B /* libPods-Example.a in Frameworks */,
+				A0AFBF59D22A70F411B44277 /* Pods_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1005,7 +1005,7 @@
 		B7015A956B0F0AA9D130F940 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D40F29D0E15B01F380B08AE9 /* libPods-Example.a */,
+				84E2C054313C490E3D6DB1B0 /* Pods_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1036,6 +1036,7 @@
 				19F151472387BDA90043A86E /* Sources */,
 				19F151482387BDA90043A86E /* Frameworks */,
 				19F151492387BDA90043A86E /* Resources */,
+				CA5B1CADFE080F46FBDFC4E7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1138,6 +1139,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA5B1CADFE080F46FBDFC4E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
